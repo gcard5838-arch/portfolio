@@ -82,13 +82,11 @@ Ajoutez de la même manière votre URL LinkedIn. Ne laissez pas un lien fictif e
 
 ### CV
 
-Ajoutez votre fichier réel dans `assets/profile/` avec le nom :
-
 ```text
-CV-Idriss-Ouchaghoui.pdf
+assets/profile/CV-Idriss-Ouchaghoui-PFE-2027.pdf
 ```
 
-Le bouton est actuellement protégé par un message placeholder tant que le fichier n'est pas fourni.
+Le bouton « Télécharger mon CV » de l'accueil télécharge ce fichier. Remplacez-le par une nouvelle version au même emplacement pour actualiser le CV.
 
 ### Images des projets
 
