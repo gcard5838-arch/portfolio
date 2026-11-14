@@ -6,7 +6,7 @@ Portfolio personnel statique construit avec HTML5, CSS3 et JavaScript vanilla. I
 
 - **Identité** : ingénierie logicielle et IA, avec une interface lumineuse, précise et éditoriale.
 - **Palette** : blanc cassé `#f8fafc`, surfaces blanches, texte ardoise `#0f172a`, bleu principal `#2563eb`, indigo et accent ambre discret.
-- **UX** : le Hero présente immédiatement le profil et la recherche de stage PFA. Les projets constituent la preuve principale, puis le parcours, les activités et un contact direct.
+- **UX** : le Hero présente le profil et la recherche d'un stage de fin d'études (PFE) pour 2027. Les projets, les expériences professionnelles, la formation et les activités sont accessibles depuis la navigation.
 - **Typographie** : Manrope pour les titres et Inter pour la lecture, chargées depuis Google Fonts. Pour un fonctionnement totalement hors ligne, les polices peuvent être remplacées par des fichiers locaux.
 
 ## Structure
@@ -98,7 +98,7 @@ Pour l'image Open Graph, ajoutez une image réelle dans `assets/profile/og-image
 
 ### Informations à compléter
 
-Les langues, les détails techniques de TaskMe et de la Plateforme Étudiants, ainsi que les métriques du projet GNN sont volontairement indiqués comme `À préciser`. Complétez uniquement avec des informations vérifiables.
+Les détails techniques de TaskMe et de la Plateforme Étudiants, ainsi que les métriques du projet GNN, restent à compléter à partir d'informations vérifiables.
 
 ## Tester localement
 

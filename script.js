@@ -25,19 +25,29 @@ const projectDetails = {
     items: ['Centralisation de services destinés aux étudiants.', 'Fonctionnalités et technologies détaillées à préciser.', 'Lien GitHub et démonstration à ajouter lorsqu ils seront disponibles.']
   },
   'project-5': {
-    title: 'Conception et Développement d’une Plateforme Web de Gestion des Formations',
-    text: 'Projet réalisé dans le cadre d un stage : conception et développement d une plateforme web destinée à gérer les formations, les utilisateurs et les fonctionnalités associées.',
-    items: ['Gestion des formations et des utilisateurs.', 'Développement avec PostgreSQL, Express.js, React.js et Node.js.', 'Architecture basée sur la stack PERN.', 'Lien GitHub et démonstration à ajouter lorsqu ils seront disponibles.']
+    title: 'Plateforme de gestion et de suivi des formations',
+    text: 'Conception et développement d une plateforme web pour gérer et suivre les formations.',
+    items: ['Frontend avec React.js et Next.js.', 'Backend avec Node.js et Express.js.', 'Conception et gestion de la base PostgreSQL.', 'Intégration de fonctionnalités IA et d un chatbot conversationnel avec LLM.']
   },
   'project-6': {
-    title: 'Site Web d’Entreprise — ASRM',
-    text: 'Conception et développement d un site web professionnel pour présenter l entreprise ASRM, ses activités, ses services et ses informations.',
-    items: ['Présentation claire des activités et services de l entreprise.', 'Interface moderne et responsive.', 'Technologies utilisées à préciser.', 'Lien GitHub et démonstration à ajouter lorsqu ils seront disponibles.']
+    title: "Site vitrine de l'entreprise ASRM",
+    text: "Conception et développement d un site vitrine présentant les activités, les services et les coordonnées de l entreprise.",
+    items: ['Développement et intégration des interfaces web.', 'React.js et Tailwind CSS pour le frontend.', 'Python (FastAPI / Django) et API REST.', 'Stage effectué au sein de SRM DT.']
   },
   'project-7': {
-    title: 'Application Web de Gestion des Locations',
-    text: 'Conception et développement d une application web dédiée à la gestion des locations.',
-    items: ['Gestion des biens ou éléments mis en location.', 'Suivi des clients et des contrats de location.', 'Centralisation des opérations liées aux locations.', 'Technologies utilisées, lien GitHub et démonstration à préciser.']
+    title: 'Application web de gestion de location de voitures',
+    text: 'Conception et développement d une application web pour le suivi du parc automobile et la gestion des locations.',
+    items: ['Gestion et suivi du parc automobile.', 'Gestion des locations.', 'Stack MERN : MongoDB, Express.js, React.js et Node.js.', 'API REST.']
+  },
+  'project-8': {
+    title: "Moteur d'analyse prédictive et traitement NLP",
+    text: 'Développement de modèles NLP et de régression pour la classification automatique des requêtes et l estimation prédictive.',
+    items: ['Modèles développés avec Python et Scikit-Learn.', 'API REST Node.js sécurisée par JWT pour l orchestration inter-services.', 'Interface avec Next.js.', 'Conteneurisation Docker et automatisation des builds et tests avec GitHub Actions.']
+  },
+  'project-9': {
+    title: 'Pipeline Big Data et Computer Vision distribué',
+    text: 'Pipeline de stockage distribué et d analyse d images construit autour d un cluster Hadoop multinœud.',
+    items: ['Configuration de HDFS sous Docker.', 'Utilitaires Java pour interagir avec HDFS.', 'Intégration d un modèle Python d analyse d images avec OpenCV.', 'Automatisation des workflows CI/CD avec GitHub Actions et conteneurisation avec Docker Compose.']
   }
 };
 
@@ -51,14 +61,21 @@ function showToast(message) {
 function closeMenu() {
   navMenu.classList.remove('is-open');
   menuToggle.setAttribute('aria-expanded', 'false');
+  menuToggle.querySelector('.sr-only').textContent = 'Ouvrir le menu';
 }
 
 menuToggle.addEventListener('click', () => {
   const isOpen = navMenu.classList.toggle('is-open');
   menuToggle.setAttribute('aria-expanded', String(isOpen));
+  menuToggle.querySelector('.sr-only').textContent = isOpen ? 'Fermer le menu' : 'Ouvrir le menu';
 });
 
 document.querySelectorAll('.nav-menu a').forEach((link) => link.addEventListener('click', closeMenu));
+document.addEventListener('keydown', (event) => {
+  if (event.key !== 'Escape' || !navMenu.classList.contains('is-open')) return;
+  closeMenu();
+  menuToggle.focus();
+});
 
 window.addEventListener('scroll', () => header.classList.toggle('is-scrolled', window.scrollY > 20), { passive: true });
 
